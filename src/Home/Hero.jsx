@@ -2,13 +2,17 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2  pt-10 container mx-auto md:px-28 '>
+    <div className='grid grid-cols-1 md:grid-cols-2  pt-28 container mx-auto md:px-28 '>
     <div >
 
     <div className='flex flex-col items-center md:items-start'>
     <h1 className='text-indigo-600 font-bold'>Personal Protfolio</h1>
-    <h1 className='text-3xl md:text-6xl font-bold'>Welcome to</h1>
-    <h1 className='text-3xl md:text-6xl font-bold'>Design World</h1>
+    <h1 className="text-3xl md:text-6xl font-bold text-transparent leading-[0px] bg-gradient-to-r from-white to-gray-600 bg-clip-text max-w-full">
+    Welcome to
+</h1>
+<h1 className="text-3xl md:text-6xl font-bold text-transparent leading-[0px] bg-gradient-to-r from-white to-gray-600 bg-clip-text max-w-full">
+    Design World
+</h1>
 
     <h6 className='mt-6 w-5/6 font-medium text-slate-500 text-center md:text-start'>A UI (User Interface) Developer plays a pivotal role in crafting the look and feel of digital applications, ensuring they are both visually appealing and highly functional.</h6>
     {/* <button className='bg-slate-900 mt-6 text-zinc-50 px-9 py-3 rounded-xl'>Contact</button> */}

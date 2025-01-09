@@ -6,11 +6,13 @@ import Tech from './Home/Tech'
 import Recentwork from './Home/Recentwork'
 import About from './Home/About'
 import Footer from './Component/Footer'
+import BackToTopButton from './Component/BackToTopButton'
+import WebAd from './Home/WebAd'
 
 export default function Home() {
   return (
 
-<div class="relative w-full bg-slate-950 overflow-hidden">
+<div class="relative w-full bg-slate-950 overflow-hidden select-none">
 
 
 
@@ -33,12 +35,13 @@ export default function Home() {
   
 
         <div className='relative z-10'>
-        <Navbar/>
         <Hero />
         <Tech />
         <Recentwork />
         <About />
+        <WebAd />
         <Footer />
+        <BackToTopButton />
         </div>
 </div>
 
