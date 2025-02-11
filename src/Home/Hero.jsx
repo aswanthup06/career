@@ -7,10 +7,10 @@ export default function Hero() {
 
     <div className='flex flex-col items-center md:items-start'>
     <h1 className='text-indigo-600 font-bold'>Personal Protfolio</h1>
-    <h1 className="text-3xl md:text-6xl font-bold text-transparent leading-[0px] bg-gradient-to-r from-white to-gray-600 bg-clip-text max-w-full">
+    <h1 className="text-3xl md:text-6xl font-bold  max-w-full">
     Welcome to
 </h1>
-<h1 className="text-3xl md:text-6xl font-bold text-transparent leading-[0px] bg-gradient-to-r from-white to-gray-600 bg-clip-text max-w-full">
+<h1 className="text-3xl md:text-6xl font-bold max-w-full">
     Design World
 </h1>
 

@@ -31,7 +31,7 @@ const BackToTopButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed flex items-center justify-center bottom-5 right-5 h-12 w-12 rounded-full shadow-lg  transition duration-300  backdrop-blur-sm bg-white/10 "
+          className="fixed flex items-center justify-center bottom-5 right-5 h-12 w-12 rounded-full shadow-lg  transition duration-300  bg-indigo-700"
         >
         <BiSolidArrowToTop />
         </button>

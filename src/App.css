@@ -4,4 +4,9 @@
 *{
   font-family: "Sora", serif;
   font-family: "Raleway", serif;
+}   
+
+
+::-webkit-scrollbar {
+  display: none;
 }

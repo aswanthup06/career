@@ -1,7 +1,10 @@
 import React from "react";
+import { MdOutlinePermPhoneMsg } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
+
+  
   return (
     <div className="w-full flex justify-center" >
 
@@ -22,8 +25,8 @@ export default function Navbar() {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "font-semibold text-blue-500 border-b-2 border-blue-500 pb-1"
-                : "font-semibold text-gray-700 hover:text-blue-500"
+                ? "font-semibold text-blue-500 border-blue-500 "
+                : "font-semibold text-gray-700  hover:text-blue-500 "
             }
           >
             Home
@@ -32,8 +35,8 @@ export default function Navbar() {
             to="/about"
             className={({ isActive }) =>
               isActive
-                ? "font-semibold text-blue-500 border-b-2 border-blue-500 pb-1"
-                : "font-semibold text-gray-700 hover:text-blue-500"
+                ? "font-semibold text-blue-500 border-blue-500  "
+                : "font-semibold text-gray-700 hover:text-blue-500 "
             }
           >
             About Me
@@ -42,20 +45,21 @@ export default function Navbar() {
             to="/project"
             className={({ isActive }) =>
               isActive
-                ? "font-semibold text-blue-500 border-b-2 border-blue-500 pb-1"
-                : "font-semibold text-gray-700 hover:text-blue-500"
+                ? "font-semibold text-blue-500 border-blue-500"
+                : "font-semibold text-gray-700 hover:text-blue-500 "
             }
           >
             Projects
           </NavLink>
         </div>
-
-        {/* Call-to-Action Button */}
-        <button className="shiny-cta">
-          <span>Contact Now</span>
-        </button>
+       <button
+       
+       className='text-xs md:text-sm bg-indigo-700 py-3 px-5 rounded-lg flex items-center gap-3'>Contact Now <MdOutlinePermPhoneMsg /></button>
       </div>
     </div>
+
+
+ 
 
 </div>
 

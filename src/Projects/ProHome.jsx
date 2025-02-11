@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ProHome() {
   return (
-    <div className='container mx-auto md:px-28'>
+    <div className='container mx-auto md:px-28 pt-28'>
 
 
 
@@ -16,6 +16,9 @@ export default function ProHome() {
          <h1>Case Study</h1>
          <h1>Website</h1>
          <h1>Poster</h1>
+         <h1>Illustrator</h1>
+         <h1>Logo</h1>
+         <h1>Drawings</h1>
 
         </div>
 
