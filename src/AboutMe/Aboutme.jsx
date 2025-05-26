@@ -6,6 +6,7 @@ import Skill from './Skill'
 import BackToTopButton from '../Component/BackToTopButton'
 import WebAd from '../Home/WebAd'
 import Footer from '../Component/Footer'
+import Me from './Me'
 
 
 export default function Aboutme() {
@@ -20,8 +21,7 @@ export default function Aboutme() {
        <ExpSec />
        <Skill  />
        <BackToTopButton />
-       
-       
+       <Me />
        <Footer />
 
 
