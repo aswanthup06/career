@@ -2,27 +2,41 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Home from './Home';
 import 'remixicon/fonts/remixicon.css'
-import Learn from './Learn';
-import Blood from './Projects/Blood';
 import Aboutme from './AboutMe/Aboutme';
-import BackToTopButton from './Component/BackToTopButton';
 import ProHome from './Projects/ProHome';
 import Navbar from "./Component/Navbar";
+import CaseStudyPage from "./Projects/CaseStudy";
+import Layout from "./Component/Layout";
+import WebPage from "./Projects/Web";
+import Posters from "./Projects/Posters";
+import Blood from "./Projects/Blood";
 
 function App() {
   return (
-
-
-<Router>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Aboutme />} />
-        <Route path="/project" element={<ProHome />} />
+        <Route path="/bloodapp" element={<Blood />} />
+        
+        {/* Project routes nested under /project */}
+        <Route path="/project" element={<Layout />}>
+          <Route index element={<CaseStudyPage />} /> {/* Default page */}
+          <Route path="casestudy" element={<CaseStudyPage />} />
+          <Route path="web" element={<WebPage />} />
+          <Route path="posters" element={<Posters />} />
+          {/* Add other project-related routes here */}
+        </Route>
       </Routes>
-</Router>
+    </Router>
 
-   
+
+
+
+
+
+
   );
 }
 

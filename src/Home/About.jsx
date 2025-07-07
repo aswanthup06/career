@@ -30,7 +30,7 @@ export default function About() {
   <div className='border-2 text-white/55  hover:text-pink-700 hover:border-pink-700 duration-500 border-white/10 h-10 w-10 rounded-full flex  justify-center items-center'>
 
   <div className="relative group">
-    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.instagram.com/awnh_up/" target="_blank" rel="noopener noreferrer">
       <AiFillInstagram className="text-2xl " />
     </a>
     <span className="absolute left-1/2 transform -translate-x-1/2 mt-2 text-sm bg-gray-700 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 duration-300">

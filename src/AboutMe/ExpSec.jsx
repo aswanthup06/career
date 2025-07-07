@@ -37,10 +37,10 @@ export default function ExpSec() {
 <div className="grid grid-cols-[1fr_2fr] gap-4 text-slate-800 py-6  border-b">
 
 <div>
-      <h1 className="text-slate-800">
+      <h1 className="font-bold text-sm text-indigo-600">
         5 June 2024 - {todayIST}
       </h1>
-      <h1 className="text-slate-800">{formattedExperience} Years Experience</h1>
+      <h1 className="text-slate-800 text-2xl">{formattedExperience} Years Experience</h1>
 </div>
 
 <div className='flex gap-6'>
@@ -57,7 +57,9 @@ export default function ExpSec() {
 </div>
 
 <div>
-    <button className='text-sm rounded-md bg-teal-600 text-gray-50 py-2 px-4'>Visit Website</button>
+    <a href="https://www.chaaviesolutions.com/" target="_blank" rel="noopener noreferrer">
+        <button className='text-sm rounded-md bg-teal-600 text-gray-50 py-2 px-4'>Visit Website</button>
+    </a>
 </div>
 
 
