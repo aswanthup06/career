@@ -25,7 +25,7 @@ function App() {
         <Route path="/project" element={<Layout />}>
           <Route index element={<CaseStudyPage />} /> {/* Default page */}
           <Route path="casestudy" element={<CaseStudyPage />} />
-          <Route path="web" element={<WebPage />} />
+          <Route path="uiux" element={<WebPage />} />
           <Route path="posters" element={<Posters />} />
           <Route path="vectors" element={<Vectors />} />
           {/* Add other project-related routes here */}

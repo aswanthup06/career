@@ -4,8 +4,7 @@ import { IoMdArrowForward } from "react-icons/io";
 const Layout = () => {
   const navItems = [
     { path: "/project", label: "Main Projects" },
-    { path: "/uiux", label: "UI UX Design" },
-    { path: "/project/web", label: "Website" },
+    { path: "/project/uiux", label: "UI UX Design" },
     { path: "/project/vectors", label: "illustrations" },
     { path: "/project/posters", label: "Posters" },
   ];

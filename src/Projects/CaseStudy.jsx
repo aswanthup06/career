@@ -1,4 +1,4 @@
-import Layout from "../Component/Layout";
+
 import { MdArrowOutward } from "react-icons/md";
 
 const caseStudies = [
@@ -10,7 +10,8 @@ const caseStudies = [
     tags: ["UI Design & Development"],
     categories: [
       { label: "Dashboard", bgColor: "bg-red-500" },
-      { label: "Report", bgColor: "backdrop-blur-sm bg-black/30" }
+      { label: "App", bgColor: "backdrop-blur-sm bg-blue-500"},
+      { label: "Website", bgColor: "backdrop-blur-sm bg-black/30" }
     ],
     description: "The outer div's height is effectively zero (because it has no content in normal flow) The padding-top pushes the height to match the width (creating the square) The absolute positioned inner div then fills that padded space."
   },
