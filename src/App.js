@@ -9,6 +9,7 @@ import CaseStudyPage from "./Projects/CaseStudy";
 import Layout from "./Component/Layout";
 import WebPage from "./Projects/Web";
 import Posters from "./Projects/Posters";
+import Vectors from "./Projects/Vector";
 import Blood from "./Projects/Blood";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="casestudy" element={<CaseStudyPage />} />
           <Route path="web" element={<WebPage />} />
           <Route path="posters" element={<Posters />} />
+          <Route path="vectors" element={<Vectors />} />
           {/* Add other project-related routes here */}
         </Route>
       </Routes>

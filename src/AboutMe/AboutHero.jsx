@@ -46,7 +46,7 @@ export default function AboutHero() {
 
           {/* LinkedIn */}
 
-          <div className="border-2 text-white/55  hover:text-blue-400 text-blue-600 hover:border-blue-400 border-blue-600 duration-500 border-white/10 h-10 w-10 rounded-full flex  justify-center items-center">
+          <div className="border  hover:text-blue-400 text-blue-600 hover:border-blue-400 border-blue-600 duration-500 h-10 w-10 rounded-full flex  justify-center items-center">
             <div className="relative group">
               <a
                 href="https://www.linkedin.com/in/aswanthup/"
@@ -61,7 +61,7 @@ export default function AboutHero() {
             </div>
           </div>
 
-          <div className="border-2 text-white/55  hover:text-pink-500 text-pink-700 hover:border-pink-300 border-pink-500 duration-500 border-white/10 h-10 w-10 rounded-full flex  justify-center items-center">
+          <div className="border  hover:text-pink-500 text-pink-700 hover:border-pink-300 border-pink-500 duration-500 h-10 w-10 rounded-full flex  justify-center items-center">
             <div className="relative group">
               <a
                 href="https://www.instagram.com/awnh_up/"
@@ -77,7 +77,7 @@ export default function AboutHero() {
           </div>
 
           {/* Behance */}
-          <div className="border-2 text-white/55  hover:text-blue-400 text-blue-600 hover:border-blue-400 border-blue-600 duration-500 border-white/10 h-10 w-10 rounded-full flex  justify-center items-center">
+          <div className="border hover:text-blue-400 text-blue-600 hover:border-blue-400 border-blue-600 duration-500 h-10 w-10 rounded-full flex  justify-center items-center">
             <div className="relative group">
               <a
                 href="https://www.behance.net/ASWANTHUP"
