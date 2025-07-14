@@ -11,6 +11,7 @@ export default function Skill() {
 
   const rightProgressData = [
     { label: "Figma", percentage: 80 },
+    { label: "Adobe XD", percentage: 80 },
     { label: "Illustrator", percentage: 70 },
     { label: "After Effects", percentage: 60 },
     { label: "Photoshop", percentage: 60 },

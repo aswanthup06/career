@@ -4,7 +4,7 @@ const caseStudies = [
   {
     id: 1,
     title: "Blood Donation App",
-    href: "/bloodapp",
+    href: "/project/bloodapp",
     image: "/asset/dr.webp",
     tags: ["UI/UX Design"],
     categories: [
@@ -16,7 +16,7 @@ const caseStudies = [
   {
     id: 2,
     title: "RENT MY THINGS",
-    href: "/bloodapp",
+    href: "/project/rentmythings",
     image: "/asset/rent.webp",
     tags: ["UI/UX Design"],
     categories: [

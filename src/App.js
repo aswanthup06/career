@@ -11,6 +11,11 @@ import WebPage from "./Projects/Web";
 import Posters from "./Projects/Posters";
 import Vectors from "./Projects/Vector";
 import Blood from "./Projects/Blood";
+import Envoc from "./Projects/Envoc";
+import Rentmythings from "./Projects/Rentmythings";
+import Drone from "./Projects/Drone";
+import Happy from "./Projects/Happy";
+import Ecommerce from "./Projects/Ecommerce";
 
 function App() {
   return (
@@ -19,7 +24,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Aboutme />} />
-        <Route path="/bloodapp" element={<Blood />} />
+        <Route path="/project/bloodapp" element={<Blood />} />
+        <Route path="/project/envoc" element={<Envoc />} />
+         <Route path="/project/rentmythings" element={<Rentmythings />} />
+         <Route path="/project/drone" element={<Drone />} />
+          <Route path="/project/happy" element={<Happy />} />
+           <Route path="/project/ecommerce" element={<Ecommerce />} />
         
         {/* Project routes nested under /project */}
         <Route path="/project" element={<Layout />}>

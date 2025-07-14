@@ -5,7 +5,7 @@ const caseStudies = [
   {
     id: 1,
     title: "DR ONE",
-    href: "/bloodapp",
+    href: "/project/drone",
     image: "/asset/dr.webp",
     tags: ["UI Design & Development"],
     categories: [
@@ -18,7 +18,7 @@ const caseStudies = [
   {
     id: 2,
     title: "ENVOC",
-    href: "/bloodapp",
+    href: "/project/envoc",
     image: "/asset/ship.webp",
     tags: ["UI Development"],
     categories: [
@@ -30,7 +30,7 @@ const caseStudies = [
   {
     id: 3,
     title: "E - Commerce",
-    href: "/bloodapp",
+    href: "/project/ecommerce",
     image: "/asset/ec.webp",
     tags: ["UI Design & Development"],
     categories: [
@@ -42,7 +42,7 @@ const caseStudies = [
   {
     id: 4,
     title: "HAPPY - ERP",
-    href: "/bloodapp",
+    href: "/project/happy",
     image: "/asset/toy.webp",
     tags: ["UI Design & Development"],
     categories: [
