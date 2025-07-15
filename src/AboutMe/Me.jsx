@@ -7,9 +7,8 @@ export default function Me() {
 
 
 
-<div>
-
-    <img className='w-72' src="asset/aswanthup.webp" alt="" />
+<div class="w-72">
+    <img class="w-full rounded-2xl filter grayscale hover:grayscale-0 transition duration-300" src="asset/aswanthup.webp" alt="" />
 </div>
 
 

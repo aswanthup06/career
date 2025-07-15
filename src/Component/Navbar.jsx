@@ -10,7 +10,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY || document.documentElement.scrollTop;
+      const currentScrollPos =
+        window.scrollY || document.documentElement.scrollTop;
       if (currentScrollPos < 10) {
         setVisible(true);
       } else {
@@ -26,19 +27,24 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar Container - moved outside the modal root */}
-      <div className={`w-full fixed top-0 z-50 transition-transform duration-300 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}>
+      <div
+        className={`w-full fixed top-0 z-50 transition-transform duration-300 ${
+          visible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
         <div className="hidden backdrop-blur-lg md:flex justify-between items-center py-4 w-full container mx-auto md:px-12 bg-white/5 shadow-sm">
           {/* Logo Section */}
-          <div className="flex items-center gap-2">
-            <img
-              className="h-10 w-10 rounded-full object-cover"
-              src="https://images.unsplash.com/photo-1730941343980-5d81ce7c768b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Logo"
-            />
-            <h1 className="text-gray-700">aswanth</h1>
-          </div>
+
+          <a href="/">
+            <div className="flex items-center gap-2">
+              <img
+                className="h-10 w-10 rounded-full object-cover"
+                src="https://images.unsplash.com/photo-1730941343980-5d81ce7c768b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Logo"
+              />
+              <h1 className="text-gray-700">aswanth</h1>
+            </div>
+          </a>
 
           {/* Navigation Links */}
           <div className="flex items-center">

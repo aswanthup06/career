@@ -50,7 +50,12 @@ export default function Recentwork() {
 
 {/* <a href="#" class="btn"><span>Explore All Project</span></a> */}
 
-<button className='bg-indigo-700 py-3 px-5 rounded-lg cursor-pointer hover:bg-slate-700'>Explore All Projects</button>
+<a
+  href="/project"
+  className='bg-indigo-700 py-3 px-5 rounded-lg cursor-pointer hover:bg-slate-700 inline-block'
+>
+  Explore All Projects
+</a>
 
 </div>
 

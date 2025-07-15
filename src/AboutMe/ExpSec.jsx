@@ -90,10 +90,10 @@ export default function ExpSec() {
         {experiences.map((exp) => (
           <div key={exp.id} className="grid grid-cols-[1fr_2fr] gap-4 text-slate-800 py-6 border-b">
             <div>
-              <h1 className="font-bold text-sm text-indigo-600">
+              <h1 className="font-bold text-sm text-indigo-600 font-sora">
                 {exp.startDate} - {exp.endDate}
               </h1>
-              <h1 className="text-slate-800 text-2xl">
+              <h1 className="text-slate-600 text-2xl font-light font-sora">
                 {exp.duration}
               </h1>
             </div>

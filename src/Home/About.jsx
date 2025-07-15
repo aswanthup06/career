@@ -90,9 +90,9 @@ export default function About() {
 
 <div className='flex gap-6'>
     <button className='text-xs md:text-sm bg-indigo-700 py-3 px-5 rounded-lg flex items-center gap-3'>Download CV <HiOutlineDownload /></button>
-    <button className="text-xs md:text-sm bg-indigo-300 bg-opacity-5 hover:bg-opacity-10 py-3 px-5 rounded-lg duration-500">
+    <a href="/about" className="text-xs md:text-sm bg-indigo-300 bg-opacity-5 hover:bg-opacity-10 py-3 px-5 rounded-lg duration-500">
   Explore More <i className="ri-arrow-right-up-long-fill"></i>
-</button>
+</a>
 </div>
 
   </div>
