@@ -1,4 +1,4 @@
-import { MdOutlinePhone, MdOutlineEmail, MdOutlineLocationOn } from 'react-icons/md';
+import { MdOutlinePhone, MdOutlineEmail, MdOutlineLocationOn, MdClose } from 'react-icons/md';
 import { LuMailCheck } from "react-icons/lu";
 import { BsWhatsapp } from "react-icons/bs";
 import { useState } from 'react';
@@ -118,7 +118,7 @@ const ContactModal = ({ isOpen, onClose }) => {
           className="absolute top-3 right-3 text-indigo-900 hover:text-red-900 h-8 w-8 rounded-full backdrop-blur-lg bg-indigo-500/70 flex items-center justify-center z-10"
           onClick={onClose}
         >
-          ✖
+         <MdClose size={20} />
         </button>
 
         <div className="p-6">
