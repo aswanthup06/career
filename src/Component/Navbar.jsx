@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { MdOutlinePermPhoneMsg, MdClose } from "react-icons/md";
+import {
+  MdOutlinePermPhoneMsg,
+  MdClose,
+  MdExpandMore,
+  MdExpandLess,
+} from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import ContactModal from "./ContactModal";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -9,10 +14,12 @@ export default function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [projectsDropdownOpen, setProjectsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY || document.documentElement.scrollTop;
+      const currentScrollPos =
+        window.scrollY || document.documentElement.scrollTop;
       if (currentScrollPos < 10) {
         setVisible(true);
       } else {
@@ -29,6 +36,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleRouteChange = () => {
       setMobileMenuOpen(false);
+      setProjectsDropdownOpen(false);
     };
 
     window.addEventListener("popstate", handleRouteChange);
@@ -46,13 +54,21 @@ export default function Navbar() {
         <div className="backdrop-blur-lg flex justify-between items-center py-4 w-full mx-auto px-6 md:px-12 bg-white/5 shadow-sm">
           {/* Logo Section */}
           <a href="/">
-            <div className="flex items-center gap-2">
-              <img
-                className="h-10 w-10 rounded-full object-cover"
-                src="https://images.unsplash.com/photo-1730941343980-5d81ce7c768b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Logo"
-              />
-              <h1 className="text-gray-700">aswanth</h1>
+            <div className="flex items-center gap-3 md:gap-4">
+              <div className="bg-slate-50 p-2 rounded-lg">
+                <img
+                  className="h-5 w-5 rounded-full object-cover"
+                  src="/asset/globe.svg"
+                  alt="Logo"
+                />
+              </div>
+
+              <div>
+                <h1 className="text-indigo-500 text-sm font-bold">
+                  Aswanth Up
+                </h1>
+                <h1 className="text-indigo-500 text-xs">Portfolio</h1>
+              </div>
             </div>
           </a>
 
@@ -79,16 +95,79 @@ export default function Navbar() {
               >
                 About Me
               </NavLink>
-              <NavLink
-                to="/project"
-                className={({ isActive }) =>
-                  isActive
-                    ? "font-semibold text-blue-500 border-blue-500"
-                    : "font-semibold text-gray-700 hover:text-blue-500"
-                }
-              >
-                Projects
-              </NavLink>
+
+              {/* Projects Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setProjectsDropdownOpen(!projectsDropdownOpen)}
+                  className="flex items-center gap-1 font-semibold text-gray-700 hover:text-blue-500"
+                >
+                  Projects
+                  {projectsDropdownOpen ? (
+                    <MdExpandLess size={20} />
+                  ) : (
+                    <MdExpandMore size={20} />
+                  )}
+                </button>
+
+                {projectsDropdownOpen && (
+                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                    <NavLink
+                      to="/project/casestudy"
+                      className={({ isActive }) =>
+                        `block px-4 py-2 text-sm ${
+                          isActive
+                            ? "bg-indigo-100 text-indigo-700"
+                            : "text-gray-700 hover:bg-gray-100"
+                        }`
+                      }
+                      onClick={() => setProjectsDropdownOpen(false)}
+                    >
+                      Main Projects
+                    </NavLink>
+                    <NavLink
+                      to="/project/uiux"
+                      className={({ isActive }) =>
+                        `block px-4 py-2 text-sm ${
+                          isActive
+                            ? "bg-indigo-100 text-indigo-700"
+                            : "text-gray-700 hover:bg-gray-100"
+                        }`
+                      }
+                      onClick={() => setProjectsDropdownOpen(false)}
+                    >
+                      UI/UX Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/project/vectors"
+                      className={({ isActive }) =>
+                        `block px-4 py-2 text-sm ${
+                          isActive
+                            ? "bg-indigo-100 text-indigo-700"
+                            : "text-gray-700 hover:bg-gray-100"
+                        }`
+                      }
+                      onClick={() => setProjectsDropdownOpen(false)}
+                    >
+                      illustrations
+                    </NavLink>
+                    <NavLink
+                      to="/project/posters"
+                      className={({ isActive }) =>
+                        `block px-4 py-2 text-sm ${
+                          isActive
+                            ? "bg-indigo-100 text-indigo-700"
+                            : "text-gray-700 hover:bg-gray-100"
+                        }`
+                      }
+                      onClick={() => setProjectsDropdownOpen(false)}
+                    >
+                      Posters
+                    </NavLink>
+                  </div>
+                )}
+              </div>
             </div>
             <button
               onClick={() => setIsModalOpen(true)}
@@ -100,87 +179,147 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button 
-              onClick={() => setMobileMenuOpen(true)}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="h-10 w-10 flex items-center justify-center text-gray-700 hover:text-indigo-700 transition-colors"
             >
-              <RiMenu3Fill size={24} />
+              {mobileMenuOpen ? (
+                <MdClose size={24} />
+              ) : (
+                <RiMenu3Fill size={24} />
+              )}
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu Overlay */}
+        {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 z-[999999999]">
-            {/* Background Overlay */}
-            <div 
-              className="absolute"
-              onClick={() => setMobileMenuOpen(false)}
-            />
-            
-            {/* Mobile Menu Content */}
-            <div className="absolute right-0 top-0 h-full w-64 bg-indigo-700 shadow-lg transition-transform duration-300">
-              <div className="p-4 flex justify-between items-center border-b">
-                <h2 className="text-xl font-bold text-white">Menu</h2>
-                <button 
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 text-gray-500 hover:text-gray-700"
-                >
-                  <MdClose size={24} />
-                </button>
-              </div>
-              
-              <div className="flex flex-col p-4 space-y-4 bg-indigo-700 rounded-es-lg">
-                <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    `p-3 rounded-lg font-medium ${
-                      isActive
-                        ? "bg-indigo-100 text-indigo-700"
-                        : "text-white hover:bg-gray-100"
-                    }`
-                  }
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Home
-                </NavLink>
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) =>
-                    `p-3 rounded-lg font-medium ${
-                      isActive
-                        ? "bg-indigo-100 text-indigo-700"
-                        : "text-white hover:bg-gray-100"
-                    }`
-                  }
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  About Me
-                </NavLink>
-                <NavLink
-                  to="/project"
-                  className={({ isActive }) =>
-                    `p-3 rounded-lg font-medium ${
-                      isActive
-                        ? "bg-indigo-100 text-indigo-700"
-                        : "text-white hover:bg-gray-100"
-                    }`
-                  }
-                  onClick={() => setMobileMenuOpen(false)}
+          <div className="md:hidden w-full bg-white shadow-lg">
+            <div className="flex flex-col items-center py-4 px-6 space-y-4">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `w-full text-center py-2 rounded-lg  ${
+                    isActive
+                      ? "font-bold text-indigo-700"
+                      : "text-gray-700 hover:bg-gray-100"
+                  }`
+                }
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `w-full text-center py-2 rounded-lg  ${
+                    isActive
+                      ? "font-bold text-indigo-700"
+                      : "text-gray-700 hover:bg-gray-100"
+                  }`
+                }
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About Me
+              </NavLink>
+
+              {/* Mobile Projects Dropdown */}
+              <div className="w-full">
+                <button
+                  onClick={() => setProjectsDropdownOpen(!projectsDropdownOpen)}
+                  className={`w-full text-center py-2 rounded-lg flex items-center justify-center gap-1 ${
+                    projectsDropdownOpen
+                      ? "font-bold text-indigo-700"
+                      : "text-gray-700"
+                  }`}
                 >
                   Projects
-                </NavLink>
-                
-                <button
-                  onClick={() => {
-                    setIsModalOpen(true);
-                    setMobileMenuOpen(false);
-                  }}
-                  className="mt-4 text-sm bg-white py-3 px-5 rounded-lg flex items-center justify-center gap-3 text-indigo-700 transition-colors"
-                >
-                  Contact Now <MdOutlinePermPhoneMsg />
+                  {projectsDropdownOpen ? (
+                    <MdExpandLess size={20} />
+                  ) : (
+                    <MdExpandMore size={20} />
+                  )}
                 </button>
+
+                {projectsDropdownOpen && (
+                  <div className="w-full mt-2 space-y-2 pl-4">
+                    <NavLink
+                      to="/project/casestudy"
+                      className={({ isActive }) =>
+                        `block w-full text-center py-2 rounded-lg text-sm ${
+                          isActive
+                            ? "font-bold text-indigo-700"
+                            : "text-gray-700 hover:bg-gray-100"
+                        }`
+                      }
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setProjectsDropdownOpen(false);
+                      }}
+                    >
+                      Main Projects
+                    </NavLink>
+                    <NavLink
+                      to="/project/uiux"
+                      className={({ isActive }) =>
+                        `block w-full text-center py-2 rounded-lg text-sm ${
+                          isActive
+                            ? "font-bold text-indigo-700"
+                            : "text-gray-700 hover:bg-gray-100"
+                        }`
+                      }
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setProjectsDropdownOpen(false);
+                      }}
+                    >
+                      UI/UX Designs
+                    </NavLink>
+                    <NavLink
+                      to="/project/vectors"
+                      className={({ isActive }) =>
+                        `block w-full text-center py-2 rounded-lg text-sm ${
+                          isActive
+                            ? "font-bold text-indigo-700"
+                            : "text-gray-700 hover:bg-gray-100"
+                        }`
+                      }
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setProjectsDropdownOpen(false);
+                      }}
+                    >
+                      illustrations
+                    </NavLink>
+                    <NavLink
+                      to="/project/posters"
+                      className={({ isActive }) =>
+                        `block w-full text-center py-2 rounded-lg text-sm ${
+                          isActive
+                            ? "font-bold text-indigo-700"
+                            : "text-gray-700 hover:bg-gray-100"
+                        }`
+                      }
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setProjectsDropdownOpen(false);
+                      }}
+                    >
+                      Posters
+                    </NavLink>
+                  </div>
+                )}
               </div>
+
+              <button
+                onClick={() => {
+                  setIsModalOpen(true);
+                  setMobileMenuOpen(false);
+                }}
+                className="w-full text-sm bg-indigo-700 py-3 px-5 rounded-lg flex items-center justify-center gap-3 text-white transition-colors"
+              >
+                Contact Now <MdOutlinePermPhoneMsg />
+              </button>
             </div>
           </div>
         )}

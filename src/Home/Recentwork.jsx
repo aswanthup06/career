@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Recentwork() {
   return (
-    <div className='container px-4 md:px-28 overflow-hidden mx-auto'>
+    <div className='container overflow-hidden mx-auto'>
 
     <div className='text-center p-10'>
             <h1 className='font-bold text-3xl '>Recent Works</h1>
@@ -52,7 +52,7 @@ export default function Recentwork() {
 
 <a
   href="/project"
-  className='bg-indigo-700 py-3 px-5 rounded-lg cursor-pointer hover:bg-slate-700 inline-block'
+  className='text-xs md:text-sm bg-indigo-700 hover:bg-indigo-800 py-3 px-5 rounded-lg flex items-center gap-3'
 >
   Explore All Projects
 </a>

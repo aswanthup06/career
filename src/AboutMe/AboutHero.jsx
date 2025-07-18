@@ -11,7 +11,7 @@ export default function AboutHero() {
 
   return (
     <div>
-      <div className="py-16 justify-center container mx-auto flex flex-col items-center">
+      <div className="py-16 justify-center container flex flex-col items-center">
         <div className="pt-12">
           <img
             className="h-24 w-24 rounded-full object-cover"
@@ -22,12 +22,12 @@ export default function AboutHero() {
 
         <h1 className="mt-8 text-green-700 font-bold">Kozhikode,Kerala</h1>
 
-        <h1 className="font-semibold text-2xl  mb-5  md:text-3xl lg:text-5xl text-center w-[80%] text-gray-900">
+        <h1 className="font-semibold text-2xl  mb-5  md:text-3xl lg:text-5xl text-center w-full md:w-[80%] text-gray-900">
           I’m Aswanth UP, a UI Designer and Developer creating seamless digital
           experiences with precision and creativity
         </h1>
 
-        <h6 className="md:mt-6 w-5/6 font-medium text-slate-500 text-center">
+        <h6 className="md:mt-6 w-full md:w-5/6 font-medium text-slate-500 text-center">
           A UI (User Interface) Developer plays a pivotal role in crafting the
           look and feel of digital applications, ensuring they are both visually
           appealing and highly functional.

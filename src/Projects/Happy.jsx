@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Happy() {
   return (
-    <div className="text-black px-24 pt-28">
-      <div className="flex gap-8">
-        <div className="flex-1">
-          <h1 className="pt-16 font-bold">HAPPY ERP</h1>
+    <div className="text-black container  pt-28">
+      <div className="grid grid-cols-1  md:grid-cols-2 gap-8">
+        <div className="flex flex-col justify-center">
+          <h1 className="font-bold">HAPPY ERP</h1>
           <h1 className="text-red-600 text-4xl mb-6 font-semibold">
             Flowers are one of nature's most beautiful creations, known for
             their vibrant colors, delicate petals, and sweet fragrances
@@ -24,7 +24,7 @@ export default function Happy() {
           </p>
         </div>
 
-        <div className="flex-1">
+        <div className="">
           <img className="rounded-2xl" src="/asset/happy.webp" alt="" />
 
           <div className="flex justify-between gap-2 w-full mt-10">
@@ -43,7 +43,7 @@ export default function Happy() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-8 mt-16">
+      <div className="grid grid-cols-1  md:grid-cols-2 gap-8 mt-16">
         <div className="flex items-center">
           <img
             className="rounded-2xl w-full object-cover h-[450px]"

@@ -9,7 +9,7 @@ export default function Tech() {
   ];
 
   return (
-    <div className='py-10 mt-6 flex flex-wrap items-center justify-center gap-7'>
+    <div className='py-10 container mt-6 flex flex-wrap items-center justify-center gap-7'>
       {technologies.map((tech, index) => (
         <div
           key={index}

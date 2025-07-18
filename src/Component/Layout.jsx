@@ -3,7 +3,7 @@ import { IoMdArrowForward } from "react-icons/io";
 
 const Layout = () => {
   const navItems = [
-    { path: "/project", label: "Main Projects" },
+    { path: "/project/casestudy", label: "Main Projects" },
     { path: "/project/uiux", label: "UI UX Design" },
     { path: "/project/vectors", label: "illustrations" },
     { path: "/project/posters", label: "Posters" },
@@ -13,7 +13,7 @@ const Layout = () => {
     <div className="container mx-auto">
       <div className="flex">
         {/* Fixed Sidebar */}
-        <div className="text-slate-900 w-2/12 hidden md:block sticky h-screen pt-28">
+        <div className="text-slate-900 w-2/12 hidden lg:block sticky h-screen pt-28">
           {navItems.map((item) => (
             <NavLink
               key={item.path}
@@ -36,7 +36,7 @@ const Layout = () => {
         </div>
 
         {/* Dynamic Content Area */}
-        <div className="w-full md:w-10/12 h-screen overflow-auto pt-28">
+        <div className="w-full lg:w-10/12 h-screen overflow-auto pt-28">
           <Outlet />
         </div>
       </div>

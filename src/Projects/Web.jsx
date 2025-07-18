@@ -30,7 +30,7 @@ const caseStudies = [
 const WebPage = () => {
   return (
   
-       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-zinc-800 pb-10">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-14 gap-2 text-zinc-800 pb-10">
            {caseStudies.map((study) => (
              <a
                key={study.id}

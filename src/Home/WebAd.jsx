@@ -21,7 +21,7 @@ export default function WebAd() {
   const roundColor = roundColors[location.pathname] || "bg-gray-800/10";
 
   return (
-    <div className="container mx-auto md:px-28 relative">
+    <div className="container  relative">
       {/* Main content */}
       <div
         className={`h-80 rounded-2xl relative ${currentBgColor} backdrop-blur-sm flex items-center justify-center overflow-hidden`}

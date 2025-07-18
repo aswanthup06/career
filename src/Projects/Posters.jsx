@@ -20,7 +20,7 @@ const PosterItem = ({ src }) => {
 
 const Posters = () => {
   return (
-    <div className="grid grid-cols-3 gap-2 text-black">
+    <div className="grid mb-14 md:grid-cols-2 lg:grid-cols-3 gap-2 text-black">
       <PosterItem src="/asset/p2.webp" />
       <PosterItem src="/asset/p3.webp" />
       <PosterItem src="/asset/p1.webp" />

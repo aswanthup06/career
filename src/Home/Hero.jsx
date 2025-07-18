@@ -5,10 +5,10 @@ import ContactModal from "../Component/ContactModal";
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2  pt-28 container mx-auto md:px-28 ">
+    <div className="grid grid-cols-1 md:grid-cols-2  pt-28 container">
       <div>
         <div className="flex flex-col items-center md:items-start">
-          <h1 className="text-indigo-600 font-bold">Personal Protfolio</h1>
+          <h1 className="text-indigo-600 font-bold">Personal Portfolio</h1>
           <h1 className="text-3xl md:text-6xl font-bold  max-w-full">
             Welcome to
           </h1>

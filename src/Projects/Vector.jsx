@@ -34,7 +34,7 @@ const VectorItem = ({ src, alt, sub, title, description }) => {
 
 export default function Vector() {
   return (
-    <div className="grid grid-cols-3 gap-2 text-black">
+    <div className="grid mb-14 md:grid-cols-2 lg:grid-cols-3 gap-2 text-black">
       <VectorItem 
         src="/asset/kadha.webp" 
         alt="Kadha illustration"
