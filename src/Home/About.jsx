@@ -17,7 +17,11 @@ export default function About() {
 <div className="container m-auto px-6 md:px-20 lg:px-28 grid gap-8 grid-cols-1 md:grid-cols-[1fr_2fr] md:py-20 ">
   <div className=" flex items-center flex-col">
   <div>
-      <img className='h-24 w-24 rounded-full object-cover' src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+      <img 
+  className='h-24 w-24 rounded-full object-cover' 
+  src="/asset/me.jpg" 
+  alt="" 
+/>
   </div>
   <h1 className='mt-6 font-bold'>Aswanth Up</h1>
   <h1 className='text-emerald-500/80'>Kozhikode - Kerala</h1>
