@@ -11,7 +11,7 @@ export default function AboutHero() {
 
   return (
     <div>
-      <div className="py-16 justify-center container mx-auto md:px-28  flex flex-col items-center">
+      <div className="py-16 justify-center container mx-auto flex flex-col items-center">
         <div className="pt-12">
           <img
             className="h-24 w-24 rounded-full object-cover"

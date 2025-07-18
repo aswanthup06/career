@@ -17,8 +17,8 @@ const caseStudies = [
   },
   {
     id: 2,
-    title: "ENVOC",
-    href: "/project/envoc",
+    title: "NVOCC",
+    href: "/project/nvocc",
     image: "/asset/ship.webp",
     tags: ["UI Development"],
     categories: [

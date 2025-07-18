@@ -3,7 +3,7 @@ import { MdOutlinePhone } from 'react-icons/md'
 
 export default function Me() {
   return (
-    <div className='grid grid-cols-2 container mx-auto md:px-28 py-10 gap-16'>
+    <div className='grid grid-cols-1 md:grid-cols-2 container mx-auto md:px-28 py-10 gap-16'>
 
 
 

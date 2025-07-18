@@ -18,7 +18,7 @@ export default function Skill() {
   ];
 
   return (
-    <div className="container px-4 md:px-28 overflow-hidden mx-auto mb-20">
+    <div className="container overflow-hidden mb-20">
       <div className="text-center p-10">
         <h1 className="font-bold text-3xl text-zinc-800">Skills</h1>
         <h1 className="text-zinc-800">
@@ -26,7 +26,7 @@ export default function Skill() {
         </h1>
       </div>
 
-      <div className="grid grid-cols-2 gap-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-32">
         <div className="space-y-6">
           <h1 className="text-zinc-800 font-bold">Technical Skills</h1>
 

@@ -32,7 +32,7 @@ export default function Navbar() {
           visible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="hidden backdrop-blur-lg md:flex justify-between items-center py-4 w-full container mx-auto md:px-12 bg-white/5 shadow-sm">
+        <div className="hidden backdrop-blur-lg md:flex justify-between items-center py-4 w-full mx-auto md:px-12 bg-white/5 shadow-sm">
           {/* Logo Section */}
 
           <a href="/">

@@ -78,7 +78,7 @@ export default function ExpSec() {
   ];
 
   return (
-    <div className="container px-4 md:px-28 overflow-hidden mx-auto">
+    <div className="container overflow-hidden">
       <div className="text-center p-10">
         <h1 className="font-bold text-3xl text-zinc-800">My Journey</h1>
         <h1 className="text-zinc-800">
@@ -88,7 +88,7 @@ export default function ExpSec() {
 
       <div>
         {experiences.map((exp) => (
-          <div key={exp.id} className="grid grid-cols-[1fr_2fr] gap-4 text-slate-800 py-6 border-b">
+          <div key={exp.id} className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 text-slate-800 py-6 border-b">
             <div>
               <h1 className="font-bold text-sm text-indigo-600 font-sora">
                 {exp.startDate} - {exp.endDate}
@@ -98,8 +98,8 @@ export default function ExpSec() {
               </h1>
             </div>
 
-            <div className="flex gap-6">
-              <div className="relative h-52 w-[36rem] overflow-hidden rounded-md border group">
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="relative h-52 md:w-[36rem] overflow-hidden rounded-md border group">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   src={exp.image}
