@@ -10,10 +10,10 @@ const Layout = () => {
   ];
 
   return (
-    <div className="container mx-auto md:px-28">
+    <div className="container mx-auto">
       <div className="flex">
         {/* Fixed Sidebar */}
-        <div className="text-slate-900 w-2/12 sticky h-screen pt-28">
+        <div className="text-slate-900 w-2/12 hidden md:block sticky h-screen pt-28">
           {navItems.map((item) => (
             <NavLink
               key={item.path}
@@ -36,7 +36,7 @@ const Layout = () => {
         </div>
 
         {/* Dynamic Content Area */}
-        <div className="w-10/12 h-screen overflow-auto pt-28">
+        <div className="w-full md:w-10/12 h-screen overflow-auto pt-28">
           <Outlet />
         </div>
       </div>
