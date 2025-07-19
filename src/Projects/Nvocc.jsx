@@ -1,8 +1,10 @@
 import React from "react";
+import BackToTopButton from "../Component/BackToTopButton";
 
 export default function Nvocc() {
   return (
     <div className="text-black w-full">
+      <BackToTopButton />
      <div className="w-full relative flex flex-col items-center justify-center">
   {/* Gradient overlay */}
   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>

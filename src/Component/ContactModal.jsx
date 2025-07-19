@@ -8,7 +8,7 @@ const ContactModal = ({ isOpen, onClose }) => {
   
   const contactData = {
     title: "Get in Touch Now!",
-    description: "I'm open to new projects and freelance opportunities! Whether you need a UI designer or front-end developer, let's collaborate and bring your ideas to life. Reach out today!",
+    description: "I'm open to new projects and freelance opportunities! Whether you need a UI designer or UI developer, let's collaborate and bring your ideas to life. Reach out today!",
     contactItems: [
       {
         type: "phone",
@@ -125,23 +125,23 @@ const ContactModal = ({ isOpen, onClose }) => {
           <h2 className="text-xl font-bold text-white/80">
             {contactData.title} 🎉
           </h2>
-          <p className="mt-2 text-white/60 text-sm font-light mb-12">
+          <p className="mt-2 text-xs text-white/60 md:text-sm font-light mb-8 md:mb-12">
             {contactData.description}
           </p>
 
           {contactData.contactItems.map((item, index) => (
-            <div key={index} className={`flex items-center gap-10 justify-between ${index < contactData.contactItems.length - 1 ? 'pb-6 mb-6' : ''}`}>
+            <div key={index} className={`flex items-center gap-10 justify-between ${index < contactData.contactItems.length - 1 ? 'pb-4 mb-4 md:mb-6' : ''}`}>
               <div className="flex gap-4 items-center">
-                <div className="h-14 w-14 text-white/70 rounded-full bg-indigo-800 flex items-center justify-center">
+                <div className="md:h-14 md:w-14 h-10 w-10 text-white/70 rounded-full bg-indigo-800 flex items-center justify-center">
                   {getIcon(item.type)}
                 </div>
                 <div>
-                  <h1 className="text-sm text-white">{item.label}</h1>
-                  <h1 className="text-lg font-thin text-white font-sora">{item.value}</h1>
+                  <h1 className="text-xs md:text-sm text-white">{item.label}</h1>
+                  <h1 className="text-sm md:text-lg  font-thin text-white font-sora">{item.value}</h1>
                 </div>
               </div>
               <button 
-                className={`bg-white/80 text-sm font-semibold h-9 text-slate-800 w-28 rounded-full whitespace-nowrap hover:bg-white transition-colors ${
+                className={`bg-white/80 text-sm font-semibold h-9 text-slate-800 w-28 rounded-full whitespace-nowrap hover:bg-white transition-colors hidden md:block ${
                   copiedEmail && item.type === 'email' ? 'bg-green-100 text-green-800' : ''
                 }`}
                 onClick={() => handleContactAction(item.type, item.value)}
@@ -150,6 +150,32 @@ const ContactModal = ({ isOpen, onClose }) => {
               </button>
             </div>
           ))}
+
+          <div className='mt-6 md:hidden'>
+            <button 
+              className='bg-white text-indigo-500 w-full rounded-lg py-2 font-medium text-sm'
+              onClick={() => handleContactAction('phone', contactData.contactItems[0].value)}
+            >
+              Call Now
+            </button>
+            <div className='grid grid-cols-2 mt-2 gap-2'>
+              <button 
+                className={`border border-white text-white w-full rounded-lg py-2 font-medium text-sm ${
+                  copiedEmail ? 'bg-green-100 text-green-800 border-green-100' : ''
+                }`}
+                onClick={() => handleContactAction('email', contactData.contactItems[1].value)}
+              >
+                {copiedEmail ? 'Copied!' : 'Mail Now'}
+              </button>
+              <button 
+                className='border border-white text-white w-full rounded-lg py-2 font-medium text-sm'
+                onClick={() => handleContactAction('whatsapp', contactData.contactItems[2].value)}
+              >
+                Chat Now
+              </button>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

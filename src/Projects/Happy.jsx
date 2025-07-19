@@ -1,8 +1,10 @@
 import React from "react";
+import BackToTopButton from "../Component/BackToTopButton";
 
 export default function Happy() {
   return (
     <div className="text-black container  pt-28">
+      <BackToTopButton />
       <div className="grid grid-cols-1  md:grid-cols-2 gap-8">
         <div className="flex flex-col justify-center">
           <h1 className="font-bold">HAPPY ERP</h1>

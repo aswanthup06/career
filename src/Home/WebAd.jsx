@@ -29,10 +29,10 @@ export default function WebAd() {
         {/* Your circular elements */}
         <div className="absolute">
           <div
-            className={`relative h-96 w-96 border ${roundColor} rounded-full`}
+            className={`relative h-64 w-64  md:h-96 md:w-96 border ${roundColor} rounded-full`}
           >
             <img
-              className="scale-90 absolute border-8 border-white/10 top-12 left-1 rounded-full h-16 w-16 object-cover"
+              className="scale-90 absolute border-8 border-white/10 md:top-12 md:left-1 rounded-full h-16 w-16 object-cover opacity-60"
               src="https://images.unsplash.com/photo-1525186402429-b4ff38bedec6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
             />
